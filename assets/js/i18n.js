@@ -3,7 +3,7 @@
 
 
   var CONFIG = {
-    WHATSAPP_NUMBER: "15551234567",
+    WHATSAPP_NUMBER: "+447721382912",
     SITE_DOMAIN: ""
   };
 
