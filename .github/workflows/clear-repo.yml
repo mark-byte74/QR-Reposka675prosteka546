@@ -1,0 +1,63 @@
+name: Delete All Files (with Excludes)
+
+on:
+  workflow_dispatch:
+    inputs:
+      exclude:
+        description: 'Comma-separated list of files/folders to keep (e.g., README.md, docs/, data.json)'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+
+jobs:
+  delete-files:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 1
+
+      - name: Delete all files except protected and excluded ones
+        run: |
+          PROTECTED=(".git" ".github/workflows")
+          EXCLUDE_INPUT="${{ github.event.inputs.exclude }}"
+          IFS=',' read -r -a EXCLUDE_ARRAY <<< "$EXCLUDE_INPUT"
+          EXCLUDE_PATHS=("${PROTECTED[@]}")
+          for item in "${EXCLUDE_ARRAY[@]}"; do
+            trimmed=$(echo "$item" | xargs)
+            [ -n "$trimmed" ] && EXCLUDE_PATHS+=("$trimmed")
+          done
+
+          FIND_CMD="find . -mindepth 1"
+          for path in "${EXCLUDE_PATHS[@]}"; do
+            FIND_CMD+=" -path \"./$path\" -prune -o"
+          done
+          FIND_CMD+=" -type f -print"
+          eval "$FIND_CMD" || true
+
+          DELETE_CMD="find . -mindepth 1"
+          for path in "${EXCLUDE_PATHS[@]}"; do
+            DELETE_CMD+=" -path \"./$path\" -prune -o"
+          done
+          DELETE_CMD+=" -type f -exec rm -f {} +"
+          eval "$DELETE_CMD"
+
+          EMPTY_DIRS_CMD="find . -mindepth 1 -type d"
+          for path in "${EXCLUDE_PATHS[@]}"; do
+            EMPTY_DIRS_CMD+=" -path \"./$path\" -prune -o"
+          done
+          EMPTY_DIRS_CMD+=" -empty -delete"
+          eval "$EMPTY_DIRS_CMD" || true
+
+      - name: Commit and push
+        run: |
+          git config user.name "GitHub Actions [Bot]"
+          git config user.email "actions@github.com"
+          git add -A
+          git commit -m "Delete all files (excluded: ${{ github.event.inputs.exclude }})" --allow-empty || echo "No changes"
+          git push -f origin HEAD:${GITHUB_REF##*/}
