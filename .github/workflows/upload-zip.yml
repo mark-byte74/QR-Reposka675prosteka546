@@ -1,0 +1,83 @@
+name: Upload ZIP from Device
+
+on:
+  workflow_dispatch:
+    inputs:
+      zip_file:
+        description: 'ZIP filename (e.g. project.zip). Leave empty for auto-detection.'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+
+jobs:
+  upload:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: List root files (debug)
+        run: ls -la
+
+      - name: Find ZIP files in root
+        id: find
+        run: |
+          shopt -s nullglob
+          files=( *.zip )
+          count=${#files[@]}
+          echo "count=$count" >> "$GITHUB_OUTPUT"
+          printf '%s\n' "${files[@]}" > /tmp/zips.txt
+          echo "Found $count zip file(s) in root:"
+          if [ "$count" -gt 0 ]; then
+            printf '  - %s\n' "${files[@]}"
+          fi
+
+      - name: Pick target ZIP
+        id: pick
+        run: |
+          USER="${{ github.event.inputs.zip_file }}"
+          if [ -n "$USER" ]; then
+            if [ -f "$USER" ]; then
+              TARGET="$USER"
+            else
+              echo "::error::File '$USER' not found in repository root."
+              ls -la *.zip 2>/dev/null || echo "No .zip files found."
+              exit 1
+            fi
+          else
+            COUNT="${{ steps.find.outputs.count }}"
+            if [ "$COUNT" -eq 0 ]; then
+              echo "::error::No .zip file found in root. Upload the ZIP first, then run this workflow."
+              exit 1
+            elif [ "$COUNT" -eq 1 ]; then
+              TARGET=$(head -n 1 /tmp/zips.txt)
+            else
+              echo "::error::Multiple .zip files found. Specify one via the input field:"
+              sed 's/^/   - /' /tmp/zips.txt
+              exit 1
+            fi
+          fi
+          echo "target=$TARGET" >> "$GITHUB_OUTPUT"
+          echo "Selected ZIP: $TARGET"
+
+      - name: Extract and deploy ZIP
+        run: |
+          unzip -o "${{ steps.pick.outputs.target }}" -d .
+          rm -f "${{ steps.pick.outputs.target }}"
+          chmod -R u+rwX .
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Extract ZIP: ${{ steps.pick.outputs.target }}"
+            git push origin HEAD:${{ github.ref_name }}
+          fi
