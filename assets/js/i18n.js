@@ -3,8 +3,8 @@
 
   var CONFIG = {
     WHATSAPP_NUMBER: "15551234567",
-    EMAIL: "",
-    TURNSTILE_SITE_KEY: "",
+    EMAIL: "test@gmail.com",
+    TURNSTILE_SITE_KEY: "0x4AAAAAAFZ5zwplvZLWBhAV",
     SITE_DOMAIN: ""
   };
 
