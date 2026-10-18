@@ -3,11 +3,11 @@
 
   var CONFIG = {
     WHATSAPP_NUMBER: "15551234567",
-    EMAIL: "",
+    EMAIL: "test@gmail.com",
     // Cloudflare Turnstile: paste your public Site Key here to enable the captcha.
     // Get it from: Cloudflare dashboard → Security → Turnstile → Add widget.
     // The Secret Key is NOT needed in this static site (only for a future backend).
-    TURNSTILE_SITE_KEY: "",
+    TURNSTILE_SITE_KEY: "0x4AAAAAAFZ5zwplvZLWBhAV",
     SITE_DOMAIN: ""
   };
 
