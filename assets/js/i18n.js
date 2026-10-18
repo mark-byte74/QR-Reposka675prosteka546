@@ -2,7 +2,7 @@
   'use strict';
 
   var CONFIG = {
-    WHATSAPP_NUMBER: "15551234567",
+    WHATSAPP_NUMBER: "+447721382912",
     EMAIL: "",
     TURNSTILE_SITE_KEY: "0x4AAAAAAFZ5zwplvZLWBhAV",
     SITE_DOMAIN: ""
