@@ -2,10 +2,10 @@
   'use strict';
 
   var CONFIG = {
-    WHATSAPP_NUMBER: "15551234567",
+    WHATSAPP_NUMBER: "+447721382912",
     EMAIL: "",
-    TURNSTILE_SITE_KEY: "",
-    SITE_DOMAIN: ""
+    TURNSTILE_SITE_KEY: "0x4AAAAAAFZ5zwplvZLWBhAV",
+    SITE_DOMAIN: "menu.codes"
   };
 
 
@@ -89,33 +89,11 @@
     if (err) err.hidden = !show;
   }
 
-  function setCaptchaLoading(show) {
-    var form = document.getElementById(FORM_ID);
-    if (!form) return;
-    var el = form.querySelector('[data-captcha-loading]');
-    if (el) el.hidden = !show;
-  }
-
-  function setCaptchaFailed(show) {
-    var form = document.getElementById(FORM_ID);
-    if (!form) return;
-    var el = form.querySelector('[data-captcha-failed]');
-    if (el) el.hidden = !show;
-  }
-
-  function setCaptchaHint(show) {
-    var form = document.getElementById(FORM_ID);
-    if (!form) return;
-    var el = form.querySelector('[data-captcha-hint]');
-    if (el) el.hidden = !show;
-  }
-
   function setSubmitEnabled(on) {
     var form = document.getElementById(FORM_ID);
     if (!form) return;
     var btn = form.querySelector('[type="submit"]');
     if (btn) btn.disabled = !on;
-    setCaptchaHint(!on && !!turnstileKey());
   }
 
   function initTurnstile() {
@@ -125,56 +103,31 @@
     var slot = form.querySelector('[data-turnstile]');
     if (!slot) return;
     form.__mcTsSlot = slot;
-    if (!key) { slot.setAttribute('hidden', ''); setCaptchaLoading(false); setCaptchaFailed(false); setSubmitEnabled(true); return; }
+    if (!key) { slot.setAttribute('hidden', ''); setSubmitEnabled(true); return; }
     slot.removeAttribute('hidden');
-    setCaptchaFailed(false);
-    if (slot.__mcWidgetId !== undefined && slot.__mcTsLang === currentLang()) { setCaptchaLoading(false); return; }
     setSubmitEnabled(false);
-    setCaptchaLoading(true);
     var render = function () {
       if (!window.turnstile) return;
-      if (slot.__mcWidgetId !== undefined && slot.__mcTsLang === currentLang()) { setCaptchaLoading(false); return; }
       try {
-        if (slot.__mcWidgetId !== undefined) { try { window.turnstile.remove(slot.__mcWidgetId); } catch (e) {} }
         slot.innerHTML = '';
         slot.__mcWidgetId = window.turnstile.render(slot, {
           sitekey: key,
           theme: 'dark',
           language: currentLang(),
-          callback: function () { setCaptchaLoading(false); setCaptchaFailed(false); setCaptchaError(false); setSubmitEnabled(true); },
-          'expired-callback': function () { setCaptchaLoading(false); setCaptchaError(true); setSubmitEnabled(false); },
-          'error-callback': function () { setCaptchaLoading(false); setCaptchaFailed(true); setSubmitEnabled(false); }
+          callback: function () { setCaptchaError(false); setSubmitEnabled(true); },
+          'expired-callback': function () { setCaptchaError(true); setSubmitEnabled(false); }
         });
-        slot.__mcTsLang = currentLang();
-        if (slot.__mcTsTimer) { clearTimeout(slot.__mcTsTimer); slot.__mcTsTimer = null; }
-      } catch (e) { warn('turnstile render failed'); setCaptchaLoading(false); setCaptchaFailed(true); }
+      } catch (e) { warn('turnstile render failed'); }
     };
     if (window.turnstile) { render(); return; }
     if (slot.__mcTsLoading) return;
     slot.__mcTsLoading = true;
-    slot.__mcTsTimer = setTimeout(function () {
-      if (slot.__mcWidgetId === undefined && !window.turnstile) { setCaptchaLoading(false); setCaptchaFailed(true); }
-    }, 20000);
-    var loadScript = function () {
-      var s = document.createElement('script');
-      s.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js';
-      s.async = true;
-      s.defer = true;
-      s.onload = render;
-      s.onerror = function () { slot.__mcTsLoading = false; setCaptchaLoading(false); setCaptchaFailed(true); };
-      document.head.appendChild(s);
-    };
-    if (typeof IntersectionObserver !== 'undefined' && !slot.__mcTsObserved) {
-      slot.__mcTsObserved = true;
-      var io = new IntersectionObserver(function (entries) {
-        for (var i = 0; i < entries.length; i++) {
-          if (entries[i].isIntersecting) { io.disconnect(); loadScript(); }
-        }
-      }, { rootMargin: '400px 0px' });
-      io.observe(form);
-      return;
-    }
-    loadScript();
+    var s = document.createElement('script');
+    s.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js';
+    s.async = true;
+    s.defer = true;
+    s.onload = render;
+    document.head.appendChild(s);
   }
 
   function turnstileToken() {
@@ -190,7 +143,6 @@
     var slot = form && form.__mcTsSlot;
     if (!slot || slot.__mcWidgetId === undefined) return;
     try { window.turnstile.reset(slot.__mcWidgetId); } catch (e) {}
-    setSubmitEnabled(false);
   }
 
   function applyEmail() {
