@@ -1,0 +1,4 @@
+# Built 2026-11-02: host mydomin.com baked in from CONFIG.SITE_DOMAIN in assets/js/i18n.js. The working copy keeps the neutral token, substituted at serve time.
+User-agent: *
+Allow: /
+Sitemap: https://mydomin.com/sitemap.xml
