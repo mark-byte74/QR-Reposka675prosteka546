@@ -260,7 +260,7 @@ var MC_I18N = {
     'en': 'Do guests need to download an app to see the menu'
   },
   'pages.faq.items.10.a': {
-    'ar': 'نعم، دخول محمي بكلمة مرور تختارها أنت ويمكنك تغييرها في أي وقت، مع رموز استرداد للطوارئ تحفظها في مكان آمن، وإمكانية إنهاء أي جلسات مفتوحة على أجهزة أخرى بضغطة واحدة. بيانات منيوك وأسعارك لا يصل إليها غيرك — لا الزبائن ولا أي طرف آخر',
+    'ar': 'نعم، دخول محمي بكلمة مرور تختارها أنت ويمكنك تغييرها في أي وقت، مع رموز استرداد للطوارئ تحفظها في مكان آمن، وإمكانية إنهاء أي جلسات مفتوحة على أجهزة أخرى بضغطة واحدة. بيانات المنيو الخاص بك وأسعارك لا يصل إليها غيرك — لا الزبائن ولا أي طرف آخر',
     'en': 'Yes, login protected by a password you choose and can change anytime, with emergency recovery codes you keep somewhere safe, and the ability to sign out any open sessions on other devices with one tap. Your menu data and prices are reached by no one but you — not guests, not anyone else'
   },
   'pages.faq.items.10.q': {
@@ -276,7 +276,7 @@ var MC_I18N = {
     'en': 'Can prices be hidden from the menu'
   },
   'pages.faq.items.12.a': {
-    'ar': 'زر تثبيت واضح يضيف المنيو كأيقونة على شاشة هاتفه — بجانب تطبيقاته المعتادة — فيفتحه بضغطة واحدة في الزيارات التالية دون مسح الرمز من جديد. الزبون الدائم يتحول عملياً إلى حامل دائم لمنيوك على هاتفه، فيتصفح أصنافك الجديدة أحياناً قبل أن يصل إلى طاولته',
+    'ar': 'زر تثبيت واضح يضيف المنيو كأيقونة على شاشة هاتفه — بجانب تطبيقاته المعتادة — فيفتحه بضغطة واحدة في الزيارات التالية دون مسح الرمز من جديد. الزبون الدائم يتحول عملياً إلى حامل دائم لالمنيو الخاص بك على هاتفه، فيتصفح أصنافك الجديدة أحياناً قبل أن يصل إلى طاولته',
     'en': 'A clear install button adds the menu as an icon on their phone screen — alongside their usual apps — so they open it with one tap on future visits without scanning again. A regular guest effectively becomes a permanent carrier of your menu on their phone, sometimes browsing your new items before they even reach their table'
   },
   'pages.faq.items.12.q': {
@@ -300,7 +300,7 @@ var MC_I18N = {
     'en': 'How do I get QR codes for the tables'
   },
   'pages.faq.items.4.a': {
-    'ar': 'من لوحة التحكم الخاصة بك مباشرة: عدّل السعر أو أضف الصنف الجديد مع صورته ووصفه بالعربية والإنجليزية، فيظهر للزبائن فوراً على هواتفهم — حتى في منتصف الخدمة. لا طباعة نسخة جديدة، ولا انتظار مصمم أو مبرمج، ولا نسخ قديمة عالقة بأيدي الزبائن. المنيو الذي يراه الزبون هو دائماً النسخة الأحدث من منيوك',
+    'ar': 'من لوحة التحكم الخاصة بك مباشرة: عدّل السعر أو أضف الصنف الجديد مع صورته ووصفه بالعربية والإنجليزية، فيظهر للزبائن فوراً على هواتفهم — حتى في منتصف الخدمة. لا طباعة نسخة جديدة، ولا انتظار مصمم أو مبرمج، ولا نسخ قديمة عالقة بأيدي الزبائن. المنيو الذي يراه الزبون هو دائماً النسخة الأحدث من المنيو الخاص بك',
     'en': 'Straight from your own admin panel: edit the price or add the new item with its photo and bilingual description, and it appears for guests on their phones instantly — even mid-service. No reprinting, no waiting on a designer or developer, no outdated copies left in guests\' hands. The menu guests see is always the latest version of your menu'
   },
   'pages.faq.items.4.q': {
@@ -308,7 +308,7 @@ var MC_I18N = {
     'en': 'How do I change a price or add a new item'
   },
   'pages.faq.items.5.a': {
-    'ar': 'تعطّله بضغطة واحدة من اللوحة، فيختفي أثره من تجربة الزبون فوراً. ويمكنك اختيار إخفائه تلقائياً من منيو الزبائن بدل عرضه مشطوباً — فلا يطلب زبون صنفاً غير متوفر ولا يُحرج النادل بالاعتذار. وعند توفره مجدداً تعيده بضغطة واحدة أيضاً، فيعود إلى مكانه في المنيو كما كان. بهذه البساطة يبقى منيوك صادقاً دائماً أمام زبائنك',
+    'ar': 'تعطّله بضغطة واحدة من اللوحة، فيختفي أثره من تجربة الزبون فوراً. ويمكنك اختيار إخفائه تلقائياً من منيو الزبائن بدل عرضه مشطوباً — فلا يطلب زبون صنفاً غير متوفر ولا يُحرج النادل بالاعتذار. وعند توفره مجدداً تعيده بضغطة واحدة أيضاً، فيعود إلى مكانه في المنيو كما كان. بهذه البساطة يبقى المنيو الخاص بك صادقاً دائماً أمام زبائنك',
     'en': 'You disable it with one tap from the panel, and it vanishes from the guest experience instantly. You can also choose to hide it automatically from the guest menu instead of showing it crossed out — so no guest orders something unavailable and no waiter is put on the spot apologizing. When it\'s back, one tap brings it back too, returning to its place in the menu as before. This simply keeps your menu honest in front of your guests, always'
   },
   'pages.faq.items.5.q': {
@@ -712,7 +712,7 @@ var MC_I18N = {
     'en': 'The four steps'
   },
   'pages.how-it-works.meta_description': {
-    'ar': 'كيف يعمل MenuCodes للمطاعم والمقاهي: نجهز محتوى المنيو والهوية ورموز QR للطاولات ثم تدير منيوك ثنائي اللغة باستقلالية من لوحة تحكم واحدة',
+    'ar': 'كيف يعمل MenuCodes للمطاعم والمقاهي: نجهز محتوى المنيو والهوية ورموز QR للطاولات ثم تدير المنيو الخاص بك ثنائي اللغة باستقلالية من لوحة تحكم واحدة',
     'en': 'How MenuCodes works: we prepare your menu content, identity and table QR codes, then you run your bilingual menu independently from one admin panel'
   },
   'pages.how-it-works.meta_keywords': {
@@ -1244,7 +1244,7 @@ var MC_I18N = {
     'en': 'Full setup handled by us'
   },
   'pages.pricing.meta_description': {
-    'ar': 'كل مطعم ومقهى مختلف لذلك يجهز MenuCodes عرض سعر مخصصا عبر واتساب: أخبرنا عن منشأتك واحصل على عرض مطابق لمنيوك واحتياجك',
+    'ar': 'كل مطعم ومقهى مختلف لذلك يجهز MenuCodes عرض سعر مخصصا عبر واتساب: أخبرنا عن منشأتك واحصل على عرض مطابق لالمنيو الخاص بك واحتياجك',
     'en': 'Every restaurant and café is different, so MenuCodes prepares a tailored quote on WhatsApp — tell us about your venue and get a quote matched to your menu'
   },
   'pages.pricing.meta_keywords': {
@@ -1480,7 +1480,7 @@ var MC_I18N = {
     'en': 'Can I update my venue\'s colors or logo after launch'
   },
   'pages.faq.items.16.a': {
-    'ar': 'نعم. هوية البزنس الخاص بك — الألوان والشعار وبيانات التواصل — تعيش في إعدادات المالك، فيمكن تحديثها في أي وقت دون المساس بمحتوى المنيو: غيّر الشعار أو ألوان البراند فينعكس التغيير على منيو الزبائن فوراً. وحتى رموز QR المطبوعة على طاولاتك تبقى صالحة تماماً، لأن الرمز يشير إلى منيوك لا إلى تصميمه. هويتك تتطور ومنيوك يتطور معها دون إعادة طباعة',
+    'ar': 'نعم. هوية البزنس الخاص بك — الألوان والشعار وبيانات التواصل — تعيش في إعدادات المالك، فيمكن تحديثها في أي وقت دون المساس بمحتوى المنيو: غيّر الشعار أو ألوان البراند فينعكس التغيير على منيو الزبائن فوراً. وحتى رموز QR المطبوعة على طاولاتك تبقى صالحة تماماً، لأن الرمز يشير إلى المنيو الخاص بك لا إلى تصميمه. هويتك تتطور والمنيو الخاص بك يتطور معها دون إعادة طباعة',
     'en': 'Yes. Your business\'s identity — colors, logo, contact details — lives in the owner settings, so it can be refreshed anytime without touching the menu content: change the logo or brand colors and the change reflects on the guest menu instantly. And even your printed QR codes stay perfectly valid, because the code points to your menu, not to its design. Your brand evolves, and your menu evolves with it — no reprinting'
   },
   'pages.faq.closing_cta.note': {
