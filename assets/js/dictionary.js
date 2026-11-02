@@ -316,7 +316,7 @@ var MC_I18N = {
     'en': 'What happens when an item runs out in the kitchen'
   },
   'pages.faq.items.6.a': {
-    'ar': 'لا. MenuCodes نظام منيو رقمي متخصص — لا يتضمن طلباً أونلاين ولا دفعاً إلكترونياً ولا حجوزات طاولات، لأن هذا التخصص هو ما يجعله متقناً لما صُمم له: عرض منيوك بأجمل صورة ممكنة. بدل ذلك، بطاقة التواصل المدمجة في المنيو تتيح للزبون الاتصال بك أو مراسلتك عبر واتساب مباشرة — فالمحادثة تبدأ فور إعجابه بطبق، وتبقى العلاقة بينك وبين زبونك مباشرة دون وسيط',
+    'ar': 'لا. MenuCodes نظام منيو رقمي متخصص — لا يتضمن طلباً أونلاين ولا دفعاً إلكترونياً ولا حجوزات طاولات، لأن هذا التخصص هو ما يجعله متقناً لما صُمم له: عرض المنيو الخاص بك بأجمل صورة ممكنة. بدل ذلك، بطاقة التواصل المدمجة في المنيو تتيح للزبون الاتصال بك أو مراسلتك عبر واتساب مباشرة — فالمحادثة تبدأ فور إعجابه بطبق، وتبقى العلاقة بينك وبين زبونك مباشرة دون وسيط',
     'en': 'No. MenuCodes is a specialized digital menu system — no online ordering, no e-payment, no table reservations, because that focus is what makes it excellent at what it was built for: presenting your menu in the best possible light. Instead, the contact card built into the menu lets guests call you or message you on WhatsApp directly — so the conversation starts the moment a dish catches their eye, and the relationship stays directly between you and your guest'
   },
   'pages.faq.items.6.q': {
