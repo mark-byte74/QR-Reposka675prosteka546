@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Built 2026-11-02: host mydomin.com baked in from CONFIG.SITE_DOMAIN in assets/js/i18n.js. The working copy keeps the neutral token, substituted at serve time. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://mydomin.com/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://mydomin.com/features/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://mydomin.com/how-it-works/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://mydomin.com/pricing/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://mydomin.com/faq/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://mydomin.com/contact/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>http://menu.codes/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>http://menu.codes/features/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>http://menu.codes/how-it-works/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>http://menu.codes/pricing/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>http://menu.codes/faq/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>http://menu.codes/contact/</loc><lastmod>2026-11-02</lastmod></url>
 </urlset>
