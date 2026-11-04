@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://__SITE_HOST__/</loc><lastmod>2026-11-04</lastmod></url>
-  <url><loc>https://__SITE_HOST__/features/</loc><lastmod>2026-11-04</lastmod></url>
-  <url><loc>https://__SITE_HOST__/how-it-works/</loc><lastmod>2026-11-04</lastmod></url>
-  <url><loc>https://__SITE_HOST__/pricing/</loc><lastmod>2026-11-04</lastmod></url>
-  <url><loc>https://__SITE_HOST__/faq/</loc><lastmod>2026-11-04</lastmod></url>
-  <url><loc>https://__SITE_HOST__/contact/</loc><lastmod>2026-11-04</lastmod></url>
-  <url><loc>https://__SITE_HOST__/partners/</loc><lastmod>2026-11-04</lastmod></url>
-  <url><loc>https://__SITE_HOST__/privacy/</loc><lastmod>2026-11-04</lastmod></url>
+  <url><loc>https://menu.codes/</loc><lastmod>2026-11-04</lastmod></url>
+  <url><loc>https://menu.codes/features/</loc><lastmod>2026-11-04</lastmod></url>
+  <url><loc>https://menu.codes/how-it-works/</loc><lastmod>2026-11-04</lastmod></url>
+  <url><loc>https://menu.codes/pricing/</loc><lastmod>2026-11-04</lastmod></url>
+  <url><loc>https://menu.codes/faq/</loc><lastmod>2026-11-04</lastmod></url>
+  <url><loc>https://menu.codes/contact/</loc><lastmod>2026-11-04</lastmod></url>
+  <url><loc>https://menu.codes/partners/</loc><lastmod>2026-11-04</lastmod></url>
+  <url><loc>https://menu.codes/privacy/</loc><lastmod>2026-11-04</lastmod></url>
 </urlset>
+
+
