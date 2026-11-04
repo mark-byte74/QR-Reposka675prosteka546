@@ -6,7 +6,7 @@
     EMAIL: "contact@menu.codes",
     TURNSTILE_SITE_KEY: "0x4AAAAAAFzTOiCpVTXQMOY8",
     SITE_DOMAIN: "menu.codes",
-    FORM_ENDPOINT: ""
+    FORM_ENDPOINT: "https://script.google.com/macros/s/AKfycbwoKk4eyqZBSSPaDloxh_0alC2M1v7ZInP6I2qVUGbPn62crgXkGp0dW7KFwSnOrFWw/exec"
   };
 
 
